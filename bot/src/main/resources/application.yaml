@@ -1,0 +1,17 @@
+app:
+  telegram-token: ${TELEGRAM_TOKEN}
+
+spring:
+  application:
+    name: Bot
+
+server:
+  port: 8080
+
+fractal:
+  url: ${SCRAPPER_URL:http://localhost:8081}
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui
