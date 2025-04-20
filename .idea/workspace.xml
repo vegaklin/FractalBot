@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1081c06b-60ec-404a-ac22-0d43c36bfecf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bot/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fractal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fractal/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BotApplication.executor": "Run",
+    "Maven.root [clean,verify].executor": "Run",
+    "Maven.root [spring-boot:run].executor": "Run",
+    "Maven.root [verify].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -43,6 +45,13 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Пользователь\Desktop\kfuFractal\FractalBot\bot\src\main" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn spring-boot:run " />
+      <command value="mvn verify" />
+      <command value="mvn clean verify" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="BotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
