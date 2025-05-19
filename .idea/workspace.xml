@@ -5,10 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1081c06b-60ec-404a-ac22-0d43c36bfecf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/fractal/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/client/FractalClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/configuration/BotConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/configuration/FractalConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/configuration/TelegramConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/configuration/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/dto/ApiErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/dto/FractalResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/dto/GenerateFractalRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/dto/ListFractalResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/dto/ListTransformationTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/exception/FractalClientException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/BotProcessUpdateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/BotService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/TelegramMessenger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/cache/fractal/InMemoryUserFractalRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/cache/fractal/UserFractalRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/cache/state/InMemoryUserStateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/cache/state/UserStateRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/command/CommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/command/GenerateCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/command/HelpCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/command/HistoryCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/command/RandomCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/command/StartCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/model/BotState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/state/StateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/ru/kfu/bot/service/util/BotUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/controller/FractalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/controller/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/controller/TelegramChatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/dto/ApiErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/dto/FractalResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/dto/GenerateFractalRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/dto/ListFractalResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/dto/ListTransformationTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/exception/ChatNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/exception/FractalNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/ChatFractalsRepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/ChatsRepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/ConfigurationsRepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/FractalsRepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/entity/Chat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/entity/ChatFractal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/entity/Configuration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/entity/Fractal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/repository/HibernateChatFractalsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/repository/HibernateChatsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/repository/HibernateConfigurationsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/repository/HibernateFractalsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/service/HibernateChatFractalsRepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/service/HibernateChatsRepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/service/HibernateConfigurationsRepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/repository/orm/service/HibernateFractalsRepositoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/FractalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/FractalGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/image/correction/GammaCorrection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/image/correction/ImageProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/image/save/ImageFormatSaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/image/save/ImageSaver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/model/AffineCoefficient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/model/FractalImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/model/Pixel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/model/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/model/Rect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/render/FractalRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/render/Renderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/AffineTransformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/DiskTransformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/HeartTransformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/HyperbolicTransformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/PolarTransformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/SinusoidalTransformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/SphereTransformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/SwirlTransformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/Transformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/transformation/WavesTransformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/util/AffineCoefficientUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fractal/src/main/java/ru/kfu/fractal/service/fractal/util/RendererUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/00-initial-schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/master.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fractal/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fractal/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fractal/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fractal/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +96,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Exception" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -33,25 +130,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BotApplication.executor": "Run",
-    "Application.FractalApplication.executor": "Run",
-    "Maven.root [clean,verify].executor": "Run",
-    "Maven.root [spring-boot:run].executor": "Run",
-    "Maven.root [verify].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Пользователь/Desktop/kfuFractal/FractalBot/fractal/src/main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BotApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.FractalApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.root [clean,verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.root [spring-boot:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.root [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Пользователь/Desktop/kfuFractal/FractalBot&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\kfuFractal\FractalBot\fractal\src\main\java\ru\kfu\fractal\dto" />
       <recent name="C:\Users\Пользователь\Desktop\kfuFractal\FractalBot\fractal\src\main" />
       <recent name="C:\Users\Пользователь\Desktop\kfuFractal\FractalBot\fractal\src\main\java\ru\kfu\fractal" />
       <recent name="C:\Users\Пользователь\Desktop\kfuFractal\FractalBot\bot\src\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Пользователь\Desktop\kfuFractal\FractalBot\bot\src\main\java\ru\kfu\bot\service" />
+      <recent name="C:\Users\Пользователь\Desktop\kfuFractal\FractalBot\fractal\src\main\java\ru\kfu\fractal\service\fractal\transformation" />
+      <recent name="C:\Users\Пользователь\Desktop\kfuFractal\FractalBot\fractal\src\main\java\ru\kfu\fractal\service\fractal\model" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.kfu.fractal.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.kfu.fractal.dto" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -61,8 +170,11 @@
       <command value="mvn clean verify" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.FractalApplication">
+  <component name="RunManager" selected="Application.BotApplication">
     <configuration name="BotApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="FRACTAL_TELEGRAM_TOKEN" value="7739876582:AAHoL9xdsUC3WEuGL34OVYoHOcHK7-2Krnc" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="ru.kfu.bot.BotApplication" />
       <module name="bot" />
       <extension name="coverage">
@@ -88,10 +200,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.BotApplication" />
+      <item itemvalue="Application.FractalApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FractalApplication" />
         <item itemvalue="Application.BotApplication" />
+        <item itemvalue="Application.FractalApplication" />
       </list>
     </recent_temporary>
   </component>

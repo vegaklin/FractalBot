@@ -1,14 +1,27 @@
 spring:
   application:
     name: Fractal
+  datasource:
+    url: jdbc:postgresql://localhost:5435/fractal
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+fractal:
+  gamma: 2.1
+  threads_count: 4
 
 server:
   port: 8081
-
-bot:
-  url: ${BOT_URL:http://localhost:8080}
 
 springdoc:
   swagger-ui:
     enabled: true
     path: /swagger-ui
+
