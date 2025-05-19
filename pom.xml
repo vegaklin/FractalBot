@@ -27,10 +27,17 @@
         <springdoc.version>2.8.4</springdoc.version>
         <lombok.version>1.18.30</lombok.version>
         <java-telegram-bot-api.version>7.11.0</java-telegram-bot-api.version>
+        <imageio.version>3.11.0</imageio.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.twelvemonkeys.imageio</groupId>
+                <artifactId>imageio-jpeg</artifactId>
+                <version>${imageio.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
