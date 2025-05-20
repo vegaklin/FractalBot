@@ -48,7 +48,7 @@ public class BotService {
                     new BotCommand("/help", "вывод списка доступных команд"),
                     new BotCommand("/generate", "начать генерацию фрактала"),
                     new BotCommand("/random", "сгененрировать слуйчайный фрактал"),
-                    new BotCommand("/history", "показать список последних пяти фракталов")));
+                    new BotCommand("/history", "показать список последних трех фракталов")));
             log.info("Bot menu commands successfully set.");
         } catch (RuntimeException e) {
             log.error("Failed to set bot commands", e);

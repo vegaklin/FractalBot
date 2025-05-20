@@ -52,7 +52,7 @@ public class HistoryCommand  implements CommandHandler {
                 telegramMessenger.sendImage(chatId, sendPhoto);
             }
 
-            telegramMessenger.sendMessage(chatId, "Введите номер изображения, чтобы снова сшенерировать с такой же конфигурацией, либо введите \"Выход\"");
+            telegramMessenger.sendMessage(chatId, "Введите номер изображения, чтобы снова сгенерировать с такой же конфигурацией, либо введите \"Выход\"");
             inMemoryUserStateRepository.setState(chatId, BotState.AWAITING_HISTORY_CONFIG);
         } catch (FractalClientException e) {
             log.error("Error getting history types {}", chatId, e);
