@@ -3,12 +3,14 @@ package ru.kfu.bot.service;
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.UpdatesListener;
 import com.pengrad.telegrambot.model.BotCommand;
-import com.pengrad.telegrambot.model.Update;
 import com.pengrad.telegrambot.request.SetMyCommands;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Slf4j
 @Service
@@ -16,7 +18,8 @@ import org.springframework.stereotype.Service;
 public class BotService {
 
     private final TelegramBot telegramBot;
-    private final BotProcessUpdateService botProcessUpdateService;
+
+    private final BotAsyncProcessor botAsyncProcessor;
 
     @PostConstruct
     public void init() {
@@ -29,7 +32,7 @@ public class BotService {
         telegramBot.setUpdatesListener(updates -> {
             log.info("Received updates from Telegram API");
             try {
-                updates.forEach(this::processUpdate);
+                updates.forEach(botAsyncProcessor::processUpdate);
             } catch (RuntimeException e) {
                 log.error("Error while processing updates", e);
             }
@@ -50,13 +53,5 @@ public class BotService {
         } catch (RuntimeException e) {
             log.error("Failed to set bot commands", e);
         }
-    }
-
-    private void processUpdate(Update update) {
-        Long chatId = update.message().chat().id();
-        String message = update.message().text();
-
-        log.info("Processing update: chatId={}, message={}", chatId, message);
-        botProcessUpdateService.process(chatId, message);
     }
 }
