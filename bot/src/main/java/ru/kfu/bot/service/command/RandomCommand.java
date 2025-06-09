@@ -26,7 +26,7 @@ public class RandomCommand implements CommandHandler {
     private final FractalClient fractalClient;
 
     public static final long AFFINE_COUNT_MIN = 1;
-    public static final long AFFINE_COUNT_MAX = 30;
+    public static final long AFFINE_COUNT_MAX = 20;
 
     public static final long SYMMETRY_COUNT_MIN = 1;
     public static final long SYMMETRY_COUNT_MAX = 10;

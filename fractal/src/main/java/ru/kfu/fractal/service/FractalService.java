@@ -34,7 +34,6 @@ public class FractalService {
 
     private final List<Transformation> transformations;
 
-    @Transactional
     public void registerChat(Long userId) {
         log.info("Registering chat with chatId: {}", userId.toString());
 

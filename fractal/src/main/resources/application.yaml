@@ -15,7 +15,7 @@ spring:
 
 fractal:
   gamma: 2.1
-  threads_count: 4
+  threads_count: 8
 
 server:
   port: 8081

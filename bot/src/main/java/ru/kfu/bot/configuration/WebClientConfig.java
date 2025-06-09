@@ -10,9 +10,9 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class WebClientConfig {
 
     @Bean
-    public WebClient fractalWebClient(FractalConfig scrapperConfig) {
+    public WebClient fractalWebClient(FractalConfig fractalConfig) {
         return WebClient.builder()
-                .baseUrl(scrapperConfig.url())
+                .baseUrl(fractalConfig.url())
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .codecs(config -> config.defaultCodecs().maxInMemorySize(1024 * 1024 * 1024))
                 .build();

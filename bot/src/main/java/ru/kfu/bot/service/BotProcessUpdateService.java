@@ -22,19 +22,14 @@ public class BotProcessUpdateService {
         log.info("Processing message '{}' from chatId {}", message, chatId);
 
         if (stateMachine.getBotState(chatId) != BotState.DEFAULT) {
-            log.info(
-                    "ChatId {} is in state {}, delegating to TrackStateMachine",
-                    chatId,
+            log.info("ChatId {} is in state {}, delegating to TrackStateMachine",chatId,
                     stateMachine.getBotState(chatId));
             stateMachine.trackProcess(chatId, message);
             return;
         }
         for (CommandHandler commandHandler : commandHandlers) {
             if (message.startsWith(commandHandler.commandName())) {
-                log.info(
-                        "Command '{}' detected for chatId {}, processing with {}",
-                        message,
-                        chatId,
+                log.info("Command '{}' detected for chatId {}, processing with {}", message, chatId,
                         commandHandler.getClass().getSimpleName());
                 commandHandler.handle(chatId, message);
                 return;

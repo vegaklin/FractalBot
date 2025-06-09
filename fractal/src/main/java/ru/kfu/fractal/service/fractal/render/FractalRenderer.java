@@ -29,7 +29,7 @@ public class FractalRenderer implements Renderer {
     private final List<Transformation> transformations;
 
     public static final int STEPS_FOR_CORRECTION = 20;
-    public static final int THREAD_WAITING_TIME = 15;
+    public static final int THREAD_WAITING_TIME = 5;
 
     @Override
     public FractalImage render(Rect world, FractalImage canvas, GenerateFractalRequest request) {
