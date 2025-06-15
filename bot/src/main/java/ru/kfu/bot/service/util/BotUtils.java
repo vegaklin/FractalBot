@@ -4,6 +4,7 @@ import ru.kfu.bot.dto.GenerateFractalRequest;
 import ru.kfu.bot.dto.ListTransformationTypes;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -51,12 +52,9 @@ public class BotUtils {
     }
 
     public static List<String> getRandomTransformations(ThreadLocalRandom random, ListTransformationTypes transformationTypes) {
-        int transformationCount = random.nextInt(1, transformationTypes.transformationTypes().size() + 1);
-        List<String> randomTransformations = new ArrayList<>();
-        for (int i = 0; i < transformationCount; i++) {
-            int randomNumber = ThreadLocalRandom.current().nextInt(1, transformationTypes.transformationTypes().size() + 1);
-            randomTransformations.add(transformationTypes.transformationTypes().get(randomNumber - 1));
-        }
-        return randomTransformations;
+        List<String> allTransformations = new ArrayList<>(transformationTypes.transformationTypes());
+        int transformationCount = random.nextInt(1, allTransformations.size() + 1);
+        Collections.shuffle(allTransformations, random);
+        return allTransformations.subList(0, transformationCount);
     }
 }
